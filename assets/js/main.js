@@ -10,6 +10,7 @@ if (navToggle) {
     navMenu.classList.add("show-menu");
   });
 }
+
 /*===== MENU HIDDEN =====*/
 /* Validate if constant exists */
 if (navClose) {
@@ -17,13 +18,32 @@ if (navClose) {
     navMenu.classList.remove("show-menu");
   });
 }
+
 /*==================== REMOVE MENU MOBILE ====================*/
 const navlink = document.querySelectorAll(".nav_link");
 function linkAction() {
   document.getElementById("nav-menu").classList.remove("show-menu");
 }
 navlink.forEach((ele) => ele.addEventListener("click", linkAction));
+
 /*==================== ACCORDION SKILLS ====================*/
+const skillsContent = document.getElementsByClassName("skills_content"),
+  skillsHeader = document.querySelectorAll(".skills_header");
+
+function toggleSkills() {
+  const itemClass = this.parentNode.className;
+
+  for (i = 0; i < skillsContent.length; i++) {
+    skillsContent[i].className = "skills_content skills_close";
+  }
+  if (itemClass === "skills_content skills_close") {
+    this.parentNode.className = "skills_content skills_open";
+  }
+}
+
+skillsHeader.forEach((ele) => {
+  ele.addEventListener("click", toggleSkills);
+});
 
 /*==================== QUALIFICATION TABS ====================*/
 
