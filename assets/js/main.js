@@ -65,8 +65,30 @@ tabs.forEach((tab) => {
     tab.classList.add("qualification_active");
   });
 });
+
 /*==================== SERVICES MODAL ====================*/
 
+const modalViews = document.querySelectorAll(".services_modal"),
+  modalBtns = document.querySelectorAll(".services_button"),
+  modelCloses = document.querySelectorAll(".services_modal_close");
+
+const modal = function (modalClick) {
+  modalViews[modalClick].classList.add("active-modal");
+};
+
+modalBtns.forEach((modalBtn, index) => {
+  modalBtn.addEventListener("click", () => {
+    modal(index);
+  });
+});
+
+modelCloses.forEach((modalBtn, index) => {
+  modalBtn.addEventListener("click", () => {
+    modalViews.forEach((modalView) => {
+      modalView.classList.remove("active-modal");
+    });
+  });
+});
 /*==================== PORTFOLIO SWIPER  ====================*/
 
 /*==================== TESTIMONIAL ====================*/
