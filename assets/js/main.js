@@ -90,7 +90,7 @@ modelCloses.forEach((modalBtn, index) => {
   });
 });
 /*==================== PORTFOLIO SWIPER  ====================*/
-const swiper = new Swiper(".portfolio_container", {
+const swiperPortfolio = new Swiper(".portfolio_container", {
   cssMode: true,
   loop: true,
   navigation: {
@@ -104,7 +104,25 @@ const swiper = new Swiper(".portfolio_container", {
   keyboard: true,
 });
 /*==================== TESTIMONIAL ====================*/
-
+const swiperTestimonial = new Swiper(".testimonial_container", {
+  loop: true,
+  spaceBetween: 48,
+  grabCursor: true,
+  autoplay: {
+    delay: 5000,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    dynamicBullets: true,
+    clickable: true,
+  },
+  breakpoints: {
+    568: {
+      slidesPreview: 2,
+    },
+  },
+  keyboard: true,
+});
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
 
 /*==================== CHANGE BACKGROUND HEADER ====================*/
