@@ -1,3 +1,5 @@
+document.getElementById("footerYear").innerHTML = new Date().getFullYear();
+
 /*==================== MENU SHOW Y HIDDEN ====================*/
 const navMenu = document.getElementById("nav-menu"),
   navToggle = document.getElementById("nav-toggle"),
@@ -46,7 +48,6 @@ skillsHeader.forEach((ele) => {
 });
 
 /*==================== QUALIFICATION TABS ====================*/
-
 const tabs = document.querySelectorAll("[data-target]"),
   tabContents = document.querySelectorAll("[data-content");
 
@@ -67,7 +68,6 @@ tabs.forEach((tab) => {
 });
 
 /*==================== SERVICES MODAL ====================*/
-
 const modalViews = document.querySelectorAll(".services_modal"),
   modalBtns = document.querySelectorAll(".services_button"),
   modelCloses = document.querySelectorAll(".services_modal_close");
@@ -89,6 +89,7 @@ modelCloses.forEach((modalBtn, index) => {
     });
   });
 });
+
 /*==================== PORTFOLIO SWIPER  ====================*/
 const swiperPortfolio = new Swiper(".portfolio_container", {
   cssMode: true,
@@ -103,6 +104,7 @@ const swiperPortfolio = new Swiper(".portfolio_container", {
   },
   keyboard: true,
 });
+
 /*==================== TESTIMONIAL ====================*/
 const swiperTestimonial = new Swiper(".testimonial_container", {
   loop: true,
@@ -123,7 +125,30 @@ const swiperTestimonial = new Swiper(".testimonial_container", {
   },
   keyboard: true,
 });
+
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
+const sections = document.querySelectorAll("section[id]");
+
+function scrollActive() {
+  const scrollY = window.pageYOffset;
+
+  sections.forEach((current) => {
+    const sectionHeight = current.offsetHeight;
+    const sectionTop = current.offsetTop - 50;
+    const sectionId = current.getAttribute("id");
+
+    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+      document
+        .querySelector(".nav_menu a[href*=" + sectionId + "]")
+        .classList.add("active-link");
+    } else {
+      document
+        .querySelector(".nav_menu a[href*=" + sectionId + "]")
+        .classList.remove("active-link");
+    }
+  });
+}
+window.addEventListener("scroll", scrollActive);
 
 /*==================== CHANGE BACKGROUND HEADER ====================*/
 
