@@ -94,10 +94,13 @@ body.dark-theme {
   color: var(--title-color);
   margin-right: var(--mb-1);
   cursor: pointer;
+  transition: 0.3s;
+  transform: rotate(0deg);
 }
 
 .theme_btn:hover {
   color: var(--first-color);
+  transform: rotate(-90deg);
 }
 
 /*==================== BASE ====================*/
