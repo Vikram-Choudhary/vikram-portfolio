@@ -100,7 +100,7 @@ body.dark-theme {
 
 .theme_btn:hover {
   color: var(--first-color);
-  transform: rotate(-90deg);
+  transform: rotate(-20deg);
 }
 
 /*==================== BASE ====================*/
