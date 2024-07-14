@@ -100,7 +100,7 @@ body.dark-theme {
 
 .theme_btn:hover {
   color: var(--first-color);
-  transform: rotate(-20deg);
+  transform: rotate(10deg);
 }
 
 /*==================== BASE ====================*/
@@ -1292,6 +1292,10 @@ img {
 
   .home_social {
     transform: translateX(-6rem);
+  }
+
+  .home_social_icon {
+    font-size: 2rem;
   }
 
   .services_container {
