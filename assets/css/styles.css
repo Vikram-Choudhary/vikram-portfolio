@@ -1280,6 +1280,12 @@ img {
 
 /* For large devices */
 @media screen and (min-width: 1024px) {
+  .container {
+    max-width: unset;
+    margin-left: 8rem;
+    margin-right: 8rem;
+  }
+
   .header,
   .main,
   .footer_container {
@@ -1291,7 +1297,7 @@ img {
   }
 
   .home_social {
-    transform: translateX(-6rem);
+    transform: translateX(-4rem);
   }
 
   .home_social_icon {
