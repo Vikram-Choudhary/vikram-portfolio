@@ -298,10 +298,34 @@ img {
 .home_social_icon {
   font-size: 1.25rem;
   color: var(--first-color);
+  transition: transform 0.3s;
 }
 
 .home_social_icon:hover {
   color: var(--first-color-alt);
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  10% {
+    transform: translateY(-7px);
+  }
+  30% {
+    transform: translateY(-5px);
+  }
+  60% {
+    transform: translateY(-3px);
+  }
+  90% {
+    transform: translateY(-1px);
+  }
 }
 
 .home_blob {
@@ -798,6 +822,11 @@ img {
   text-align: center;
 }
 
+.project_container {
+  display: grid;
+  row-gap: 3rem;
+}
+
 .project_bg {
   background-color: var(--first-color-second);
   padding-top: 3rem;
@@ -1158,6 +1187,10 @@ img {
     margin: 0;
   }
 
+  .scroll-header {
+    box-shadow: 0 -6px 10px 5px rgba(0, 0, 0, 0.5);
+  }
+
   .home_container {
     row-gap: 5rem;
   }
@@ -1245,6 +1278,7 @@ img {
   }
 
   .project_container {
+    display: grid;
     background-color: var(--first-color-second);
     border-radius: 1rem;
     padding: 3rem 2.5rem 0;
@@ -1280,12 +1314,6 @@ img {
 
 /* For large devices */
 @media screen and (min-width: 1024px) {
-  .container {
-    max-width: unset;
-    margin-left: 8rem;
-    margin-right: 8rem;
-  }
-
   .header,
   .main,
   .footer_container {
