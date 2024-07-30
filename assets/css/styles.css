@@ -1102,6 +1102,15 @@ img {
     text-align: center;
   }
 }
+
+@media screen and (max-width: 567px) {
+  .testimonial_data,
+  .testimonial_header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
 /* For medium devices */
 @media screen and (min-width: 568px) {
   .home_content {
@@ -1289,6 +1298,10 @@ img {
     padding-top: 0.8rem;
   }
 
+  .testimonial_container {
+    max-width: 90%;
+  }
+
   .footer_container {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -1341,6 +1354,10 @@ img {
 
   .portfolio_content {
     column-gap: 5rem;
+  }
+
+  .testimonial_container {
+    max-width: 60%;
   }
 
   .portfolio_swiper_icon {
