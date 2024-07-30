@@ -119,7 +119,7 @@ const swiperTestimonial = new Swiper(".testimonial_container", {
     clickable: true,
   },
   breakpoints: {
-    1024: { slidesPerView: 2, spaceBetween: 20 },
+    1024: { slidesPerView: 2, spaceBetween: 30 },
   },
   keyboard: true,
 });
