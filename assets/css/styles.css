@@ -938,6 +938,13 @@ img {
   padding: 0.25rem 0.5rem 0.5rem 0;
 }
 
+.contact_message {
+  min-height: 100px;
+  min-width: 460px;
+  max-height: 300px;
+  max-width: 600px;
+}
+
 /*==================== FOOTER ====================*/
 .footer {
   padding-top: 2rem;
