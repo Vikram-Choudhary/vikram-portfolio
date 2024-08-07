@@ -899,15 +899,52 @@ img {
   text-align: center;
   border: 1px dashed #28a745;
   padding: var(--mb-0-75) var(--mb-0-25);
+  overflow: hidden;
 }
 
 .contact_show_msg {
   display: grid;
-  row-gap: 2rem;
+  row-gap: 0.5rem;
 }
 
 .contact_form_success_icon {
   font-size: 5rem;
+  display: inline-block;
+  animation: moveIcon 1.5s ease-in-out;
+}
+
+@keyframes moveIcon {
+  0% {
+    transform: translateX(-100%);
+  }
+  30% {
+    transform: translateX(5%);
+    animation-timing-function: ease-in-out;
+  }
+  100% {
+    transform: translateX(200%);
+  }
+}
+
+.pop-in {
+  animation: popInBounce 0.3s ease-in-out forwards;
+}
+
+@keyframes popInBounce {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  80% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .contact_container {

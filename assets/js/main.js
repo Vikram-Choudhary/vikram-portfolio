@@ -268,5 +268,13 @@ const submitContactMe = () => {
   const form = document.getElementById("contact-form");
   form.style.display = "none";
   msgContainer.classList.add("contact_show_msg");
-  msgElement.innerHTML = "Thank You, Your submission has been received.";
+  msgContainer.scrollIntoView({ behavior: "smooth", block: "center" });
+  msgElement.innerHTML = "Thank You!, Your submission has been received.";
+
+  const iconElement = document.querySelector(".contact_form_success_icon");
+
+  iconElement.addEventListener("animationend", function () {
+    iconElement.classList.replace("uil-fast-mail", "uil-check-circle");
+    iconElement.classList.add("pop-in");
+  });
 };
