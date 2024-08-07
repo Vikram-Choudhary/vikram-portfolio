@@ -877,31 +877,34 @@
                     </div>
                 </div>
 
-                <form action="" class="contact_form grid">
+                <form class="contact_form grid" name="contact-portfolio" method="post" onsubmit="submit"
+                    data-netlify="true" data-netlify-honeypot="bot-field">
+                    <input style="display: none;" name="bot-field">
                     <div class="contact_inputs grid">
                         <div class="contact_content">
-                            <label for="" class="contact_label">Name</label>
-                            <input type="text" class="contact_input">
+                            <label for="" class="contact_label">Your Name</label>
+                            <input type="text" class="contact_input" id="name" name="name">
                         </div>
                         <div class="contact_content">
                             <label for="" class="contact_label">Email</label>
-                            <input type="email" class="contact_input">
+                            <input type="email" class="contact_input" id="email" name="email">
                         </div>
                     </div>
                     <div class="contact_content">
                         <label for="" class="contact_label">Subject</label>
-                        <input type="text" class="contact_input">
+                        <input type="text" class="contact_input" id="subject" name="subject">
                     </div>
                     <div class="contact_content">
                         <label for="" class="contact_label">Message</label>
-                        <textarea name="" id="" cols="0" rows="7" class="contact_input contact_message"></textarea>
+                        <textarea id="message" name="message" cols="0" rows="7"
+                            class="contact_input contact_message"></textarea>
                     </div>
 
                     <div>
-                        <a href="#" class="button button--flex">
+                        <button type="submit" class="button button--flex">
                             Send Message
                             <i class="uil uil-messgae button_icon"></i>
-                        </a>
+                        </button>
                     </div>
                 </form>
             </div>
