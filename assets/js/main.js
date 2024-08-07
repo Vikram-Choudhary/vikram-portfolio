@@ -261,20 +261,33 @@ window.onload = function () {
 };
 
 // Contact me form handler
+const contactForm = document.getElementById("contact-form");
 
-const submitContactMe = () => {
-  const msgContainer = document.getElementById("contact-msg-container");
-  const msgElement = document.getElementById("contact-msg");
-  const form = document.getElementById("contact-form");
-  form.style.display = "none";
-  msgContainer.classList.add("contact_show_msg");
-  msgContainer.scrollIntoView({ behavior: "smooth", block: "center" });
-  msgElement.innerHTML = "Thank You!, Your submission has been received.";
+contactForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const myForm = event.target;
+  const formData = new FormData(myForm);
 
-  const iconElement = document.querySelector(".contact_form_success_icon");
+  fetch("/", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams(formData).toString(),
+  })
+    .then(() => {
+      const msgContainer = document.getElementById("contact-msg-container");
+      const msgElement = document.getElementById("contact-msg");
+      const form = document.getElementById("contact-form");
+      form.style.display = "none";
+      msgContainer.classList.add("contact_show_msg");
+      msgContainer.scrollIntoView({ behavior: "smooth", block: "center" });
+      msgElement.innerHTML = "Thank You!, Your submission has been received.";
 
-  iconElement.addEventListener("animationend", function () {
-    iconElement.classList.replace("uil-fast-mail", "uil-check-circle");
-    iconElement.classList.add("pop-in");
-  });
-};
+      const iconElement = document.querySelector(".contact_form_success_icon");
+
+      iconElement.addEventListener("animationend", function () {
+        iconElement.classList.replace("uil-fast-mail", "uil-check-circle");
+        iconElement.classList.add("pop-in");
+      });
+    })
+    .catch((error) => alert(error));
+});

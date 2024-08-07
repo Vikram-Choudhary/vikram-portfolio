@@ -877,28 +877,28 @@
                     </div>
                 </div>
 
-                <form id="contact-form" class="contact_form grid" name="contact-portfolio" method="post"
-                    onsubmit="submit" action="javascript:submitContactMe()" data-netlify="true"
-                    data-netlify-honeypot="bot-field">
+                <form method="POST" id="contact-form" class="contact_form grid" name="contact-portfolio" action=""
+                    netlify-honeypot="bot-field" data-netlify="true">
                     <input style="display: none;" name="bot-field">
+                    <input type="hidden" name="form-name" value="contact-portfolio" />
                     <div class="contact_inputs grid">
                         <div class="contact_content">
                             <label for="" class="contact_label">Your Name</label>
-                            <input type="text" class="contact_input" id="name" name="name">
+                            <input type="text" class="contact_input" id="name" name="name" required>
                         </div>
                         <div class="contact_content">
                             <label for="" class="contact_label">Email</label>
-                            <input type="email" class="contact_input" id="email" name="email">
+                            <input type="email" class="contact_input" id="email" name="email" required>
                         </div>
                     </div>
                     <div class="contact_content">
                         <label for="" class="contact_label">Subject</label>
-                        <input type="text" class="contact_input" id="subject" name="subject">
+                        <input type="text" class="contact_input" id="subject" name="subject" required>
                     </div>
                     <div class="contact_content">
                         <label for="" class="contact_label">Message</label>
-                        <textarea id="message" name="message" cols="0" rows="7"
-                            class="contact_input contact_message"></textarea>
+                        <textarea id="message" name="message" cols="0" rows="7" class="contact_input contact_message"
+                            required></textarea>
                     </div>
 
                     <div>
@@ -908,6 +908,7 @@
                         </button>
                     </div>
                 </form>
+
                 <div id="contact-msg-container" class="contact_success_msg">
                     <i class="uil uil-fast-mail contact_form_success_icon"></i>
                     <span id="contact-msg"></span>
