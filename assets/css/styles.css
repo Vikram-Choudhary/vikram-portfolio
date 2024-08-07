@@ -891,6 +891,25 @@ img {
 }
 
 /*==================== CONTACT ME ====================*/
+.contact_success_msg {
+  display: none;
+  height: fit-content;
+  align-self: center;
+  color: #28a745;
+  text-align: center;
+  border: 1px dashed #28a745;
+  padding: var(--mb-0-75) var(--mb-0-25);
+}
+
+.contact_show_msg {
+  display: grid;
+  row-gap: 2rem;
+}
+
+.contact_form_success_icon {
+  font-size: 5rem;
+}
+
 .contact_container {
   row-gap: 3rem;
 }

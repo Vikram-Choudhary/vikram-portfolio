@@ -877,8 +877,9 @@
                     </div>
                 </div>
 
-                <form class="contact_form grid" name="contact-portfolio" method="post" onsubmit="submit"
-                    data-netlify="true" data-netlify-honeypot="bot-field">
+                <form id="contact-form" class="contact_form grid" name="contact-portfolio" method="post"
+                    onsubmit="submit" action="javascript:submitContactMe()" data-netlify="true"
+                    data-netlify-honeypot="bot-field">
                     <input style="display: none;" name="bot-field">
                     <div class="contact_inputs grid">
                         <div class="contact_content">
@@ -907,6 +908,10 @@
                         </button>
                     </div>
                 </form>
+                <div id="contact-msg-container" class="contact_success_msg">
+                    <i class="uil uil-fast-mail contact_form_success_icon"></i>
+                    <span id="contact-msg"></span>
+                </div>
             </div>
         </section>
     </main>

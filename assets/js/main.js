@@ -200,6 +200,7 @@ themeButton.addEventListener("click", () => {
   localStorage.setItem("selected-icon", getCurrentIcon());
 });
 
+// Visitor Counter library functions
 function trimTrailingSlash(string) {
   if (string != null) {
     return string.replace(/\/+$/, "");
@@ -257,4 +258,15 @@ window.onload = function () {
     linkToHide = el;
     linkToHide.innerHTML = "";
   }
+};
+
+// Contact me form handler
+
+const submitContactMe = () => {
+  const msgContainer = document.getElementById("contact-msg-container");
+  const msgElement = document.getElementById("contact-msg");
+  const form = document.getElementById("contact-form");
+  form.style.display = "none";
+  msgContainer.classList.add("contact_show_msg");
+  msgElement.innerHTML = "Thank You, Your submission has been received.";
 };
