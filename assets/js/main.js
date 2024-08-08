@@ -276,8 +276,8 @@ contactForm.addEventListener("submit", (event) => {
     .then(() => {
       const msgContainer = document.getElementById("contact-msg-container");
       const msgElement = document.getElementById("contact-msg");
-      const form = document.getElementById("contact-form");
-      form.style.display = "none";
+      const contactForm = document.getElementById("contact-form");
+      contactForm.style.display = "none";
       msgContainer.classList.add("contact_show_msg");
       msgContainer.scrollIntoView({ behavior: "smooth", block: "center" });
       msgElement.innerHTML = "Thank You!, Your submission has been received.";
