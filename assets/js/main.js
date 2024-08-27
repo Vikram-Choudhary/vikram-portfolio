@@ -3,6 +3,7 @@ document.getElementById("footerYear").innerHTML = new Date().getFullYear();
 let isScrolling = false;
 
 function debounceScroll(event) {
+  if (window.innerWidth < 768) return;
   if (isScrolling) return;
 
   isScrolling = true;
