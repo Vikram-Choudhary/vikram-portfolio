@@ -638,6 +638,16 @@ img {
   color: var(--text-color-light);
 }
 
+.qualification_sub {
+  margin-top: var(--mb-0-25);
+  font-size: var(--smaller-font-size);
+  color: var(--text-color-light);
+  ul {
+    margin-left: var(--mb-1);
+    list-style: inherit;
+  }
+}
+
 .qualification_rounder {
   display: inline-block;
   width: 13px;
@@ -1246,8 +1256,6 @@ img {
 
   .section {
     padding: 6rem 0 2rem;
-    height: 100vh;
-    align-content: center;
   }
 
   .section_subtitle {
