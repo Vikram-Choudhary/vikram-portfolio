@@ -1240,6 +1240,8 @@ img {
 
   .section {
     padding: 6rem 0 2rem;
+    height: 100vh;
+    align-content: center;
   }
 
   .section_subtitle {
