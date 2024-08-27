@@ -144,6 +144,11 @@ img {
 }
 
 /*==================== REUSABLE CSS CLASSES ====================*/
+
+.ul-disc {
+  list-style: disc;
+}
+
 .section {
   padding: 2rem 0 4rem;
 }
@@ -785,7 +790,7 @@ img {
 }
 
 .portfolio_img {
-  width: 265px;
+  width: 100%;
   border-radius: 0.5rem;
   justify-self: center;
 }
@@ -797,6 +802,10 @@ img {
 
 .portfolio_description {
   margin-bottom: var(--mb-0-75);
+}
+
+.portfolio_description_sub {
+  margin-left: var(--mb-1);
 }
 
 .portfolio_button:hover .button_icon {
@@ -1256,6 +1265,7 @@ img {
 
   .section {
     padding: 6rem 0 2rem;
+    min-height: 100vh;
   }
 
   .section_subtitle {
@@ -1372,7 +1382,7 @@ img {
   }
 
   .portfolio_img {
-    width: 320px;
+    width: 90%;
   }
 
   .portfolio_content {
