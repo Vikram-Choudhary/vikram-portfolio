@@ -543,14 +543,20 @@ img {
 .skills_html {
   width: 90%;
 }
-.skills_css {
+.skills_type {
   width: 70%;
 }
 .skills_js {
-  width: 50%;
+  width: 90%;
 }
 .skills_react {
   width: 85%;
+}
+.skills_next {
+  width: 40%;
+}
+.skills_jQuery {
+  width: 70%;
 }
 .skills_php {
   width: 70%;
