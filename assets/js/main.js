@@ -1,33 +1,33 @@
 document.getElementById("footerYear").innerHTML = new Date().getFullYear();
 
-// let isScrolling = false;
+let isScrolling = false;
 
-// function debounceScroll(event) {
-//   if (window.innerWidth < 768) return;
-//   if (isScrolling) return;
+function debounceScroll(event) {
+  if (window.innerWidth < 768) return;
+  if (isScrolling) return;
 
-//   isScrolling = true;
-//   const sections = document.querySelectorAll("section");
-//   const currentSection = Math.round(window.scrollY / window.innerHeight);
+  isScrolling = true;
+  const sections = document.querySelectorAll("section");
+  const currentSection = Math.round(window.scrollY / window.innerHeight);
 
-//   if (event.deltaY > 0 && currentSection < sections.length - 1) {
-//     window.scrollTo({
-//       top: (currentSection + 1) * window.innerHeight,
-//       behavior: "smooth",
-//     });
-//   } else if (event.deltaY < 0 && currentSection > 0) {
-//     window.scrollTo({
-//       top: (currentSection - 1) * window.innerHeight,
-//       behavior: "smooth",
-//     });
-//   }
+  if (event.deltaY > 0 && currentSection < sections.length - 1) {
+    window.scrollTo({
+      top: (currentSection + 1) * window.innerHeight,
+      behavior: "smooth",
+    });
+  } else if (event.deltaY < 0 && currentSection > 0) {
+    window.scrollTo({
+      top: (currentSection - 1) * window.innerHeight,
+      behavior: "smooth",
+    });
+  }
 
-//   setTimeout(() => {
-//     isScrolling = false;
-//   }, 1000);
-// }
+  setTimeout(() => {
+    isScrolling = false;
+  }, 1000);
+}
 
-// document.addEventListener("wheel", debounceScroll);
+document.addEventListener("wheel", debounceScroll);
 
 /*==================== MENU SHOW Y HIDDEN ====================*/
 const navMenu = document.getElementById("nav-menu"),
