@@ -169,6 +169,9 @@ img {
   text-align: center;
 }
 
+.align-content-center {
+  align-content: center;
+}
 /*==================== LAYOUT ====================*/
 .container {
   margin-left: var(--mb-1-5);
