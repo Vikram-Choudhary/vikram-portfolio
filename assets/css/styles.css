@@ -811,6 +811,10 @@ img {
   margin-left: var(--mb-1);
 }
 
+.portfolio_button {
+  margin: 0.75rem 0rem;
+}
+
 .portfolio_button:hover .button_icon {
   transform: translateX(0.25rem);
 }
