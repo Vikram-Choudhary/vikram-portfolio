@@ -94,12 +94,16 @@ modelCloses.forEach((modalBtn, index) => {
 const swiperPortfolio = new Swiper(".portfolio_container", {
   cssMode: true,
   loop: true,
+  autoplay: {
+    delay: 5000,
+  },
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
   pagination: {
     el: ".swiper-pagination",
+    dynamicBullets: true,
     clickable: true,
   },
   keyboard: true,
