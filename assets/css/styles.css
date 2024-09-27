@@ -1351,6 +1351,13 @@ img {
     text-align: initial;
   }
 
+  .about_description_more {
+    padding-bottom: var(--mb-2-5);
+    a {
+      color: var(--first-color);
+    }
+  }
+
   .about_info {
     justify-content: space-between;
   }
